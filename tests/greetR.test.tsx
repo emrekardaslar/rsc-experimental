@@ -4,7 +4,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { createRemixStub } from "@remix-run/testing";
 
 import { describe, it } from "vitest";
-import Greet from "../app/routes/greet";
+import Greet, { loader } from "../app/routes/greet";
 
 describe("Greet component", () => {
   it("displays the greeting message", async () => {
@@ -19,5 +19,9 @@ describe("Greet component", () => {
     ]);
     render(<RemixStub />);
     await waitFor(() => screen.findByText("Hello, Remix with Vitest!"));
+  });
+
+  it("tests loader", () => {
+    loader();
   });
 });
