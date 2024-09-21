@@ -1,4 +1,5 @@
 // tests/greet.test.tsx
+//https://remix.run/docs/en/main/utils/create-remix-stub
 import { render, screen, waitFor } from "@testing-library/react";
 import { createRemixStub } from "@remix-run/testing";
 
