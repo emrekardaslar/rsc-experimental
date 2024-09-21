@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import Greet from "./ShowGreet"; // Update the import path if necessary
+import Greet from "./Greet"; // Update the import path if necessary
 import { GreetRepository } from "../../repository/GreetRepository";
 import { describe, it, expect, vi } from "vitest";
 

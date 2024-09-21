@@ -1,7 +1,7 @@
 // app/routes/greet.tsx
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import Greet from "../Views/Greet/ShowGreet";
+import Greet from "../Views/Greet/Greet";
 
 // Loader for the 'greet' route
 export async function loader() {
