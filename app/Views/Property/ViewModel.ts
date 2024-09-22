@@ -1,5 +1,8 @@
-import { ACTION_TYPE_ONE, ACTION_TYPE_TWO } from "../../actions/actions";
-import { useStateContext } from "../../context/Context";
+import {
+  ACTION_TYPE_ONE,
+  ACTION_TYPE_TWO,
+} from "../../actions/PropertyActions";
+import { useStateContext } from "../../context/PropertyContext";
 
 export default function usePropertyViewModel() {
   const { state, dispatch } = useStateContext();

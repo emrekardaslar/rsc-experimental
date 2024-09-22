@@ -1,11 +1,14 @@
 import { useReducer } from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { StateProvider } from "../../context/Context";
+import { StateProvider } from "../../context/PropertyContext";
 import { State } from "../../context/types";
-import { reducer } from "../../reducers/reducer";
+import { reducer } from "../../reducers/PropertyReducer";
 import PropertyView from "./PropertyView";
 import { describe, it, expect, vi } from "vitest";
-import { ACTION_TYPE_ONE, ACTION_TYPE_TWO } from "../../actions/actions";
+import {
+  ACTION_TYPE_ONE,
+  ACTION_TYPE_TWO,
+} from "../../actions/PropertyActions";
 
 const initialState: State = {
   propertyOne: 0,

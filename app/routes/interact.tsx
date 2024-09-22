@@ -1,8 +1,8 @@
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { StateProvider } from "../context/Context";
+import { StateProvider } from "../context/PropertyContext";
 import { State } from "../context/types";
-import { reducer } from "../reducers/reducer";
+import { reducer } from "../reducers/PropertyReducer";
 import { useReducer } from "react";
 import PropertyView from "../Views/Property/PropertyView";
 

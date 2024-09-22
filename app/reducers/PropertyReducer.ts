@@ -1,4 +1,4 @@
-import { ACTION_TYPE_ONE, ACTION_TYPE_TWO } from "../actions/actions";
+import { ACTION_TYPE_ONE, ACTION_TYPE_TWO } from "../actions/PropertyActions";
 import { State, Action } from "../context/types";
 
 // Reducer function handling actions
