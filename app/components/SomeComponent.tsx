@@ -1,5 +1,5 @@
+import { ACTION_TYPE_ONE, ACTION_TYPE_TWO } from "../actions/actions";
 import { useStateContext } from "../context/Context";
-import { ACTION_TYPE_ONE, ACTION_TYPE_TWO } from "~/actions/actions";
 
 const SomeComponent = () => {
   const { state, dispatch } = useStateContext();

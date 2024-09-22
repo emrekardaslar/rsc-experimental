@@ -1,11 +1,10 @@
-// app/routes/greet.tsx
-import { json, TypedResponse } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import SomeComponent from "../components/SomeComponent";
+import { StateProvider } from "../context/Context";
+import { State } from "../context/types";
+import { reducer } from "../reducers/reducer";
 import { useReducer } from "react";
-import SomeComponent from "~/components/SomeComponent";
-import { StateProvider } from "~/context/Context";
-import { State } from "~/context/types";
-import { reducer } from "~/reducers/reducer";
 
 // Loader for the 'greet' route
 export async function loader() {

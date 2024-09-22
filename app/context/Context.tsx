@@ -1,4 +1,3 @@
-// app/context/Context.ts
 import { createContext, useContext, ReactNode } from "react";
 import { State, Action } from "./types";
 

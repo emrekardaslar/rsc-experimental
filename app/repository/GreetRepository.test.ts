@@ -1,4 +1,3 @@
-// app/models/repository/GreetRepository.test.ts
 import { describe, it, expect } from "vitest";
 import { GreetRepository } from "./GreetRepository";
 
