@@ -37,7 +37,7 @@ describe("PropertyView", () => {
   });
 
   it("updates Property One when button is clicked", () => {
-    const { container } = render(
+    render(
       <MockStateProvider>
         <PropertyView />
       </MockStateProvider>
@@ -76,5 +76,11 @@ describe("PropertyView", () => {
       payload: 100,
     });
     expect(stateAfterUpdate.propertyTwo).toBe(100); // Expected value after update
+  });
+
+  it("handles error on non-existing action", () => {
+    expect(() => {
+      reducer(initialState, { type: "UNKNOWN_ACTION", payload: 0 });
+    }).toThrow("Unknown action: UNKNOWN_ACTION");
   });
 });
