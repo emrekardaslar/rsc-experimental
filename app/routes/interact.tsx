@@ -1,10 +1,10 @@
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import SomeComponent from "../components/SomeComponent";
 import { StateProvider } from "../context/Context";
 import { State } from "../context/types";
 import { reducer } from "../reducers/reducer";
 import { useReducer } from "react";
+import PropertyView from "../Views/Property/PropertyView";
 
 // Loader for the 'greet' route
 export async function loader() {
@@ -21,7 +21,7 @@ export default function Interact() {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <StateProvider state={state} dispatch={dispatch}>
-      <SomeComponent />
+      <PropertyView />
     </StateProvider>
   );
 }
