@@ -1,4 +1,3 @@
-// tests/greet.test.tsx
 import { render, screen, waitFor } from "@testing-library/react";
 import { createRemixStub } from "@remix-run/testing";
 
@@ -6,7 +5,7 @@ import { describe, it, expect } from "vitest";
 import Interact, { loader } from "../app/routes/interact";
 import { State } from "../app/context/types";
 
-describe("Greet component", () => {
+describe("Interact route tests", () => {
   it("displays the initial state values", async () => {
     const RemixStub = createRemixStub([
       {
