@@ -1,4 +1,3 @@
-// app/routes/greet.tsx
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Greet from "../Views/Greet/Greet";

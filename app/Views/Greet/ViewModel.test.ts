@@ -1,4 +1,3 @@
-// app/Views/Greet/ViewModel.test.ts
 import useGreetViewModel from "./ViewModel";
 import { GreetRepository } from "../../repository/GreetRepository";
 import { describe, it, expect, vi } from "vitest";
