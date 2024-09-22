@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { StateProvider } from "../../context/Context";
 import { State } from "../../context/types";
 import { reducer } from "../../reducers/reducer";
@@ -34,5 +34,33 @@ describe("PropertyView", () => {
 
     expect(propertyOneElements.length).toBeGreaterThan(0); // Check if at least one exists
     expect(propertyTwoElements.length).toBeGreaterThan(0); // Check if at least one exists
+  });
+
+  it("updates Property One when button is clicked", async () => {
+    render(
+      <MockStateProvider>
+        <PropertyView />
+      </MockStateProvider>
+    );
+
+    const updateButtons = screen.getAllByText(/Update Property One/i);
+    fireEvent.click(updateButtons[0]); // Click the first button
+
+    const propertyOneElement = screen.getAllByText(/Property One:/i)[0];
+    expect(propertyOneElement).toHaveTextContent("Property One: -100"); // Adjust based on your reducer logic
+  });
+
+  it("updates Property Two when button is clicked", async () => {
+    render(
+      <MockStateProvider>
+        <PropertyView />
+      </MockStateProvider>
+    );
+
+    const updateButtons = screen.getAllByText(/Update Property Two/i);
+    fireEvent.click(updateButtons[0]); // Click the first button
+
+    const propertyTwoElement = screen.getAllByText(/Property Two:/i)[0];
+    expect(propertyTwoElement).toHaveTextContent("Property Two: 100"); // Adjust based on your reducer logic
   });
 });
