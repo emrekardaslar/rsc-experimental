@@ -22,7 +22,7 @@ const MockStateProvider = ({ children }: any) => {
 };
 
 describe("PropertyView", () => {
-  it("renders SomeComponent", () => {
+  it("renders PropertyView", () => {
     render(
       <MockStateProvider>
         <PropertyView />
